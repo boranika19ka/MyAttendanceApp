@@ -48,6 +48,29 @@ data class TodayResponse(
     val attendance: AttendanceItem?
 )
 
+data class LeaveItem(
+    val id: Int,
+    val user_id: Int,
+    val reason: String,
+    val start_date: String,
+    val end_date: String,
+    val status: String
+)
+
+data class LeaveListResponse(
+    val leaves: List<LeaveItem>
+)
+
+data class LeaveRequest(
+    val reason: String,
+    val start_date: String,
+    val end_date: String
+)
+
+data class LeaveResponse(
+    val message: String
+)
+
 interface ApiService {
     @POST("api/login")
     suspend fun login(@Body request: LoginRequest): Response<LoginResponse>
@@ -60,4 +83,15 @@ interface ApiService {
 
     @GET("api/attendance/today")
     suspend fun today(@Header("Authorization") token: String): Response<TodayResponse>
+
+    @POST("api/leave")
+    suspend fun submitLeave(
+        @Header("Authorization") token: String,
+        @Body request: LeaveRequest
+    ): Response<LeaveResponse>
+
+    @GET("api/leave")
+    suspend fun myLeaves(
+        @Header("Authorization") token: String
+    ): Response<LeaveListResponse>
 }
