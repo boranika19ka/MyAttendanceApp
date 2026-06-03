@@ -101,4 +101,9 @@ interface ApiService {
     suspend fun myLeaves(
         @Header("Authorization") token: String
     ): Response<LeaveListResponse>
+
+    @GET("api/stats")
+    suspend fun myStats(
+        @Header("Authorization") token: String
+    ): Response<StatsResponse>
 }
