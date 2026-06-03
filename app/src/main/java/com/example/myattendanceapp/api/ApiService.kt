@@ -101,6 +101,15 @@ data class OvertimeResponse(
     val message: String
 )
 
+data class ChangePasswordRequest(
+    val old_password: String,
+    val new_password: String
+)
+
+data class ChangePasswordResponse(
+    val message: String
+)
+
 interface ApiService {
     @POST("api/login")
     suspend fun login(@Body request: LoginRequest): Response<LoginResponse>
@@ -140,4 +149,10 @@ interface ApiService {
     suspend fun myOvertimes(
         @Header("Authorization") token: String
     ): Response<OvertimeListResponse>
+
+    @POST("api/change-password")
+    suspend fun changePassword(
+        @Header("Authorization") token: String,
+        @Body request: ChangePasswordRequest
+    ): Response<ChangePasswordResponse>
 }

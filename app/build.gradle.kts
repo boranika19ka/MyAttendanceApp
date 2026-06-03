@@ -53,4 +53,6 @@ dependencies {
     implementation("com.google.android.material:material:1.11.0")
     // QR Code Scanner
     implementation("com.journeyapps:zxing-android-embedded:4.3.0")
+    // Image loading
+    implementation("com.github.bumptech.glide:glide:4.16.0")
 }
