@@ -31,7 +31,7 @@
 
             <TextView
                 android:id="@+id/tvName"
-                android:layout_width="wrap_content"
+                android:layout_width="115dp"
                 android:layout_height="wrap_content"
                 android:text="Welcome, Staff"
                 android:textColor="#BBDEFB"
@@ -205,7 +205,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="វត្តមាន (Attendance)"
+                            android:text="វត្តមាន"
                             android:textSize="17sp"
                             android:textColor="#333333"
                             android:layout_marginStart="16dp"/>
@@ -238,7 +238,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="ស្ថានភាពបច្ចុប្បន្ន"
+                        android:text="ស្ថានភាពទ"
                         android:textSize="17sp"
                         android:textStyle="bold"
                         android:textColor="#1A237E"

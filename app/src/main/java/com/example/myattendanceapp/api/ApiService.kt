@@ -78,6 +78,29 @@ data class StatsResponse(
     val leave: Int
 )
 
+data class OvertimeItem(
+    val id: Int,
+    val user_id: Int,
+    val date: String,
+    val hours: Double,
+    val reason: String,
+    val status: String
+)
+
+data class OvertimeListResponse(
+    val overtimes: List<OvertimeItem>
+)
+
+data class OvertimeRequest(
+    val date: String,
+    val hours: Double,
+    val reason: String
+)
+
+data class OvertimeResponse(
+    val message: String
+)
+
 interface ApiService {
     @POST("api/login")
     suspend fun login(@Body request: LoginRequest): Response<LoginResponse>
@@ -106,4 +129,15 @@ interface ApiService {
     suspend fun myStats(
         @Header("Authorization") token: String
     ): Response<StatsResponse>
+
+    @POST("api/overtime")
+    suspend fun submitOvertime(
+        @Header("Authorization") token: String,
+        @Body request: OvertimeRequest
+    ): Response<OvertimeResponse>
+
+    @GET("api/overtime")
+    suspend fun myOvertimes(
+        @Header("Authorization") token: String
+    ): Response<OvertimeListResponse>
 }
