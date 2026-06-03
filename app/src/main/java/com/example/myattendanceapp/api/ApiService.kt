@@ -71,6 +71,13 @@ data class LeaveResponse(
     val message: String
 )
 
+data class StatsResponse(
+    val present: Int,
+    val late: Int,
+    val absent: Int,
+    val leave: Int
+)
+
 interface ApiService {
     @POST("api/login")
     suspend fun login(@Body request: LoginRequest): Response<LoginResponse>
