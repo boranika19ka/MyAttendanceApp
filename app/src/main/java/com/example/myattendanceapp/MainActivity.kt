@@ -22,8 +22,9 @@ class MainActivity : AppCompatActivity() {
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> replaceFragment(HomeFragment())
-                R.id.nav_notify -> replaceFragment(HomeFragment()) // later
+//                R.id.nav_notify -> replaceFragment(HomeFragment()) // later
                 R.id.nav_profile -> replaceFragment(ProfileFragment())
+                R.id.nav_notify -> replaceFragment(NotifyFragment())
             }
             true
         }
