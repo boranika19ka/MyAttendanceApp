@@ -221,6 +221,37 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+            <!-- Banner Slideshow -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/bannerViewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"/>
+
+                    <!-- Dots indicator -->
+                    <LinearLayout
+                        android:id="@+id/dotsLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:padding="8dp"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
             <!-- Stats Card -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"

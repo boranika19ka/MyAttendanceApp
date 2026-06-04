@@ -55,4 +55,6 @@ dependencies {
     implementation("com.journeyapps:zxing-android-embedded:4.3.0")
     // Image loading
     implementation("com.github.bumptech.glide:glide:4.16.0")
+    //banner
+    implementation("androidx.viewpager2:viewpager2:1.1.0")
 }
