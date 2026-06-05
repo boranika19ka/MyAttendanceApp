@@ -20,6 +20,9 @@ import java.util.Locale
 
 class HomeFragment : Fragment() {
 
+    private var bannerHandler: Handler? = null
+    private var bannerRunnable: Runnable? = null
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -103,27 +106,28 @@ class HomeFragment : Fragment() {
 
         viewPager.adapter = BannerAdapter(banners)
 
-        // Auto slide
-        val handler = Handler(Looper.getMainLooper())
-        val runnable = object : Runnable {
+        bannerHandler = Handler(Looper.getMainLooper())
+        bannerRunnable = object : Runnable {
             override fun run() {
+                if (!isAdded) return
                 val next = (viewPager.currentItem + 1) % banners.size
                 viewPager.setCurrentItem(next, true)
-                handler.postDelayed(this, 3000)
+                bannerHandler?.postDelayed(this, 3000)
             }
         }
-        handler.postDelayed(runnable, 3000)
+        bannerHandler?.postDelayed(bannerRunnable!!, 3000)
 
-        // Dots
         updateDots(dotsLayout, 0, banners.size)
         viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
+                if (!isAdded) return
                 updateDots(dotsLayout, position, banners.size)
             }
         })
     }
 
     private fun updateDots(dotsLayout: android.widget.LinearLayout, current: Int, total: Int) {
+        if (!isAdded) return
         dotsLayout.removeAllViews()
         for (i in 0 until total) {
             val dot = TextView(requireContext())
@@ -136,5 +140,11 @@ class HomeFragment : Fragment() {
             dot.setPadding(4, 0, 4, 0)
             dotsLayout.addView(dot)
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        bannerRunnable?.let { bannerHandler?.removeCallbacks(it) }
+        bannerHandler = null
     }
 }
