@@ -33,15 +33,15 @@ class OvertimeAdapter(private val list: List<OvertimeItem>) :
 
         when (item.status) {
             "pending" -> {
-                holder.tvStatus.text = "⏳ រង់ចាំ"
+                holder.tvStatus.text = "Pending"
                 holder.tvStatus.setTextColor(Color.parseColor("#FF9800"))
             }
             "approved" -> {
-                holder.tvStatus.text = "✅ អនុម័ត"
+                holder.tvStatus.text = "Approved"
                 holder.tvStatus.setTextColor(Color.parseColor("#4CAF50"))
             }
             "rejected" -> {
-                holder.tvStatus.text = "❌ បដិសេធ"
+                holder.tvStatus.text = "Rejected"
                 holder.tvStatus.setTextColor(Color.parseColor("#F44336"))
             }
         }

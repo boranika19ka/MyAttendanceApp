@@ -136,14 +136,14 @@ class QRFragment : Fragment() {
 
                     when (body.type) {
                         "check_in" -> {
-                            val status = if (body.status == "late") "⚠️ យឺត!" else "✅ ទាន់ម៉ោង!"
+                            val status = if (body.status == "late") "យឺត!" else "ទាន់ម៉ោង!"
                             Toast.makeText(requireContext(),
                                 "ចូលធ្វើការ ${body.time?.substring(0,5)} - $status",
                                 Toast.LENGTH_LONG).show()
                         }
                         "check_out" -> {
                             Toast.makeText(requireContext(),
-                                "ចេញធ្វើការ ${body.time?.substring(0,5)} ✅",
+                                "ចេញធ្វើការ ${body.time?.substring(0,5)}",
                                 Toast.LENGTH_LONG).show()
                         }
                         "done" -> {

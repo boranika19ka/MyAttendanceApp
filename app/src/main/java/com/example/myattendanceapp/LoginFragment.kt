@@ -87,6 +87,7 @@ class LoginFragment : Fragment() {
                             .putString("name", body.user.name)
                             .putString("email", body.user.email)
                             .putString("role", body.user.role)
+                            .putString("salary", body.user.salary)
                             .putInt("user_id", body.user.id)
                             .apply()
 

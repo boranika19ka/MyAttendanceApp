@@ -39,7 +39,7 @@ class ProfileFragment : Fragment() {
 
             // Show image
             Glide.with(this).load(it).circleCrop().into(imgProfile)
-            Toast.makeText(requireContext(), "រូបភាពបានផ្លាស់ប្តូរ! ✅", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "រូបភាពបានផ្លាស់ប្តូរ!", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -53,6 +53,7 @@ class ProfileFragment : Fragment() {
         val name = prefs.getString("name", "Staff") ?: "Staff"
         val email = prefs.getString("email", "") ?: ""
         val role = prefs.getString("role", "staff") ?: "staff"
+        val salary = prefs.getString("salary", "0$") ?: "0$"
         val profileImage = prefs.getString("profile_image", null)
 
         imgProfile = view.findViewById(R.id.imgProfile)
@@ -77,6 +78,7 @@ class ProfileFragment : Fragment() {
         view.findViewById<TextView>(R.id.tvName).text = name
         view.findViewById<TextView>(R.id.tvEmail).text = email
         view.findViewById<TextView>(R.id.tvRole).text = role
+        view.findViewById<TextView>(R.id.tvSalary).text = salary
 
         // Change photo button
         view.findViewById<LinearLayout>(R.id.btnChangePhoto).setOnClickListener {

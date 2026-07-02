@@ -83,12 +83,10 @@
                         android:paddingEnd="20dp"
                         android:background="?attr/selectableItemBackground">
 
-                        <TextView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:text="📷"
-                            android:textSize="26sp"
-                            android:gravity="center"/>
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_check"/>
 
                         <TextView
                             android:layout_width="0dp"
@@ -96,15 +94,12 @@
                             android:layout_weight="1"
                             android:text="កត់ត្រាវត្តមាន"
                             android:textSize="17sp"
-                            android:textColor="#333333"
-                            android:layout_marginStart="16dp"/>
+                            android:textColor="#333333"/>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="›"
-                            android:textSize="24sp"
-                            android:textColor="#AAAAAA"/>
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@android:drawable/arrow_up_float"/>
                     </LinearLayout>
 
                     <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F0F0F0"/>
@@ -120,12 +115,11 @@
                         android:paddingEnd="20dp"
                         android:background="?attr/selectableItemBackground">
 
-                        <TextView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:text="📝"
-                            android:textSize="26sp"
-                            android:gravity="center"/>
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/ic_leave"
+                            android:layout_marginEnd="16dp"/>
 
                         <TextView
                             android:layout_width="0dp"
@@ -133,15 +127,12 @@
                             android:layout_weight="1"
                             android:text="សំុច្បាប់"
                             android:textSize="17sp"
-                            android:textColor="#333333"
-                            android:layout_marginStart="16dp"/>
+                            android:textColor="#333333"/>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="›"
-                            android:textSize="24sp"
-                            android:textColor="#AAAAAA"/>
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@android:drawable/arrow_up_float"/>
                     </LinearLayout>
 
                     <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F0F0F0"/>
@@ -157,12 +148,11 @@
                         android:paddingEnd="20dp"
                         android:background="?attr/selectableItemBackground">
 
-                        <TextView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:text="⏰"
-                            android:textSize="26sp"
-                            android:gravity="center"/>
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/ic_overtime"
+                            android:layout_marginEnd="16dp"/>
 
                         <TextView
                             android:layout_width="0dp"
@@ -170,15 +160,12 @@
                             android:layout_weight="1"
                             android:text="ធ្វើការថែមម៉ោង"
                             android:textSize="17sp"
-                            android:textColor="#333333"
-                            android:layout_marginStart="16dp"/>
+                            android:textColor="#333333"/>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="›"
-                            android:textSize="24sp"
-                            android:textColor="#AAAAAA"/>
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@android:drawable/arrow_up_float"/>
                     </LinearLayout>
 
                     <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F0F0F0"/>
@@ -194,12 +181,11 @@
                         android:paddingEnd="20dp"
                         android:background="?attr/selectableItemBackground">
 
-                        <TextView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:text="📋"
-                            android:textSize="26sp"
-                            android:gravity="center"/>
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/ic_attendance"
+                            android:layout_marginEnd="16dp"/>
 
                         <TextView
                             android:layout_width="0dp"
@@ -207,15 +193,12 @@
                             android:layout_weight="1"
                             android:text="វត្តមាន"
                             android:textSize="17sp"
-                            android:textColor="#333333"
-                            android:layout_marginStart="16dp"/>
+                            android:textColor="#333333"/>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="›"
-                            android:textSize="24sp"
-                            android:textColor="#AAAAAA"/>
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@android:drawable/arrow_up_float"/>
                     </LinearLayout>
 
                 </LinearLayout>
@@ -288,11 +271,10 @@
                             android:orientation="vertical"
                             android:gravity="center">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="✅"
-                                android:textSize="28sp"/>
+                            <ImageView
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:src="@drawable/ic_check"/>
 
                             <TextView
                                 android:id="@+id/tvPresent"
@@ -319,11 +301,10 @@
                             android:orientation="vertical"
                             android:gravity="center">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="❌"
-                                android:textSize="28sp"/>
+                            <ImageView
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:src="@drawable/ic_close"/>
 
                             <TextView
                                 android:id="@+id/tvAbsent"
@@ -350,11 +331,10 @@
                             android:orientation="vertical"
                             android:gravity="center">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="📝"
-                                android:textSize="28sp"/>
+                            <ImageView
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:src="@drawable/ic_leave"/>
 
                             <TextView
                                 android:id="@+id/tvLeave"
@@ -381,11 +361,10 @@
                             android:orientation="vertical"
                             android:gravity="center">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="🏖️"
-                                android:textSize="28sp"/>
+                            <ImageView
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:src="@drawable/ic_overtime"/>
 
                             <TextView
                                 android:id="@+id/tvDayOff"

@@ -39,15 +39,15 @@ class AttendanceAdapter(private val list: List<AttendanceItem>) :
         // Status
         when (item.status) {
             "present" -> {
-                holder.tvStatus.text = "✅ ទាន់ម៉ោង"
+                holder.tvStatus.text = "Present"
                 holder.tvStatus.setTextColor(Color.parseColor("#4CAF50"))
             }
             "late" -> {
-                holder.tvStatus.text = "⚠️ យឺត"
+                holder.tvStatus.text = "Late"
                 holder.tvStatus.setTextColor(Color.parseColor("#FF9800"))
             }
             "absent" -> {
-                holder.tvStatus.text = "❌ អវត្តមាន"
+                holder.tvStatus.text = "Absent"
                 holder.tvStatus.setTextColor(Color.parseColor("#F44336"))
             }
         }
